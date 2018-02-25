@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Realtime communication with WebRTC</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <h1>Realtime communication with WebRTC</h1>
+
+    <div id="videoCanvas">
+        <video id="camera" autoplay playsinline></video>
+    </div>
+
+    <div id="filterButtons">
+        <button id="green">Green Filter</button>
+        <button id="blue">Blue Filer</button>
+        <button id="pink">Pink Filer</button>
+        <button id="yellow">Yellow Filer</button>
+        <button id="blur">Blur Filer</button>
+        <button id="clear">Clear Filer</button>
+    </div>
+    <div id="snapButton">
+        <button id="snap">Snap</button>
+    </div>
+    <div id="snappedPhoto">
+        <h2>Snapped photo</h2>
+        <canvas id="photo"></canvas>
+    </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
