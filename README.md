@@ -3,7 +3,7 @@
 ## What you'll learn
 * Get video from your webcam
 * Apply filters on your video stream
-* Take a photo and display it in the webpage
+* Take a snap of your video stream and display it in the webpage
 
 ## What you'll need
 * Chrome 47 or above.
