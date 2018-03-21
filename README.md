@@ -1,4 +1,4 @@
-# Stream video with WebRTC
+# Capture video from webcam with WebRTC
 
 ## What you'll learn
 * Get video from your webcam
