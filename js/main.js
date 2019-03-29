@@ -1,23 +1,11 @@
 'use strict';
 
-// On this codelab, you will be streaming only video (video: true).
-const mediaStreamConstraints = {
-  video: true,
-};
-
-// Video element where stream will be placed.
 const video = document.querySelector('video');
-var photo = document.getElementById('photo');
-var photoContext = photo.getContext('2d');
-var snapBtn = document.getElementById('snap');
-
 var videoFilter;
 
-// Attach event handlers
+// Add button click actions.
 document.getElementById('blue').addEventListener('click', setBlueFilter);
 document.getElementById('clear').addEventListener('click', setClearFilter);
-
-// snapBtn.addEventListener('click', snapPhoto);
 
 function setVideoFilter(filter) {
     videoFilter = filter;
@@ -32,8 +20,11 @@ function setClearFilter() {
     setVideoFilter('');
 }
 
+// Take a snap of your webcam. Uncomment the lines below for Task 2.
 /*
-// Capture current snapshot of video stream and display into photo
+var photo = document.getElementById('photo');
+var photoContext = photo.getContext('2d');
+document.getElementById('snap').addEventListener('click', snapPhoto);
 function snapPhoto() {
     photoContext.drawImage(video, 0, 0, photo.width, photo.height);
     document.getElementById('photo').style.filter = videoFilter;
@@ -51,5 +42,5 @@ function handleLocalMediaStreamError(error) {
 }
 
 // Initializes media stream.
-navigator.mediaDevices.getUserMedia(mediaStreamConstraints)
+navigator.mediaDevices.getUserMedia({ video: true })
   .then(gotLocalMediaStream).catch(handleLocalMediaStreamError);
